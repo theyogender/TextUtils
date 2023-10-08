@@ -12,9 +12,9 @@ function App() {
         <div >
           <Navbar Title="YogenderS" textAbout="Text1" />
           {/* <Navbar /> */}
-          {/* <div className="container">
+          <div className="container">
           <Text name="Yogender Bhai" />
-        </div> */}
+        </div>
         </div>
         <div className="container mp-3">
           <About />
