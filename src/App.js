@@ -31,10 +31,7 @@ function App() {
           <Text name="Yogender Bhai" mode={mode} changebg={chgbg} />
         </div>
       </div>
-      {/* <div className="container mp-3">
-          <About />
-        </div> */}
-
+      
 
     </>
   );
