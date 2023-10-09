@@ -23,7 +23,7 @@ export default function Textform(props) {
     <>
       <div className="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">
-         <h4>{props.name} enter Here </h4>
+         <h4  style={{'color':props.mode==='light'?'black':'white'}}>{props.name} enter Here </h4>
         </label>
         <textarea
           className="form-control "
@@ -31,24 +31,25 @@ export default function Textform(props) {
           value={text}
           onChange={onChange}
           rows="8"
+          style={{'color':props.mode==='light'?'black':'white','backgroundColor':props.mode==='light'?'white':'#A9A9A9'}}
         ></textarea>
       </div>
        {/* <hr/> */}
       <div className="mb-3">
-        <button className="btn btn-outline-success mx-2" onClick={onUpClick} >
+        <button className={`btn btn-outline-${props.mode=='light'?'primary':'dark'} mx-2`} onClick={onUpClick}  style={{'color':props.mode==='light'?'black':'white'}} >
           Change To Upper
         </button>
-        <button className="btn btn-outline-danger " onClick={onLoClick} >
+        <button className={`btn btn-outline-${props.mode=='light'?'primary':'dark'} mx-2`} onClick={onLoClick} style={{'color':props.mode==='light'?'black':'white'}} >
           Change To Lower
         </button>
       </div>
 
-      <div className="container">
-         <h2>Your Text Summary is :</h2>
-         <p>{text.split(" ").length} Words and {text.length} alphabets are there</p>
+      <div className="container"  >
+         <h2 style={{'color':props.mode==='light'?'black':'white'}}>Your Text Summary is :</h2>
+         <p style={{'color':props.mode==='light'?'black':'white'}}>{text.split(" ").length} Words and {text.length} alphabets are there</p>
          
-         <h3>Preview</h3>
-        <p>{text}</p>
+         <h3 style={{'color':props.mode==='light'?'black':'white'}}>Preview</h3>
+        <p style={{'color':props.mode==='light'?'black':'white'}}>{text}</p>
         
         
       </div>
