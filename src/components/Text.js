@@ -8,12 +8,14 @@ export default function Textform(props) {
   let onUpClick = () => {
     let newtext = text.toUpperCase();
     setText(newtext);
+    props.alert1('Changed to Upper','primary')
     // console.log(text);
   };
 
   let onLoClick=()=>{
     let newtext=text.toLowerCase();
     setText(newtext);
+    props.alert1('Changed to Lower','primary')
   }
   
 
