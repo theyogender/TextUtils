@@ -7,7 +7,7 @@ export default function About() {
     const [mbutton,Sbutton]=useState("Dark Mode")
 
     let update=()=>{
-        if(mystyle.color=='black')
+        if(mystyle.color==='black')
         {
         Upstate({color: "white", backgroundColor: "black"})
         Sbutton("Light Mode")
